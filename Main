@@ -407,7 +407,7 @@ end
 
 table.insert(framework.connections, UserInputService.InputBegan:Connect(function(input, gpe)
     if gpe or not enabled then return end
-    if input.KeyCode == Enum.KeyCode.E then
+    if input.KeyCode == Enum.KeyCode.V then
         local msg = words[math.random(1, #words)]
         SendChatMessage(msg)
         api:Notify("Trash: " .. msg, 1.5)
@@ -416,7 +416,7 @@ end))
 
    group:AddToggle("anti_rpg", {
         Text = "anti rpg",
-        Default = true,
+        Default = false,
     }):OnChanged(function(v)
         framework.antiRpgActive = v
     end)
@@ -481,7 +481,7 @@ do
     group:AddToggle("sort_toggle", {
     Text = "inventory sorter",
     Tooltip = "bruh who even uses ts🥀",
-    Default = false,
+    Default = true,
     Callback = function()
         local toggle = Toggles.sort_toggle
         if not toggle then return end
@@ -495,9 +495,9 @@ do
 
 group:AddLabel("press to sort")
     :AddKeyPicker("sort_keybind", {
-        Default = "I",
+        Default = "P",
         Mode = "Hold",
-        Text = "sort inventory",
+        Text = "KomLikesItClean",
         NoUI = false
     })
 
@@ -607,7 +607,7 @@ local positionStack = {}
 table.insert(framework.connections, UserInputService.InputBegan:Connect(function(input, gpe)
     if gpe or not enabled then return end
 
-    if input.KeyCode == Enum.KeyCode.J then
+    if input.KeyCode == Enum.KeyCode.T then
         local target = api.Target.silent and api.Target.silent.player
         if target and target.Character and target.Character:FindFirstChild("HumanoidRootPart") then
             local hrp = target.Character.HumanoidRootPart
@@ -617,7 +617,7 @@ table.insert(framework.connections, UserInputService.InputBegan:Connect(function
             end
         end
 
-    elseif input.KeyCode == Enum.KeyCode.RightShift then
+    elseif input.KeyCode == Enum.KeyCode.G then
         if #positionStack > 0 and LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
             local lastPos = table.remove(positionStack)
             LocalPlayer.Character.HumanoidRootPart.CFrame = lastPos
@@ -756,7 +756,7 @@ end))
 
 group:AddToggle("no_jump_cd", {
     Text = "no jump Cooldown",
-    Default = false
+    Default = true
 })
 
 table.insert(framework.connections, RunService.Heartbeat:Connect(function()
