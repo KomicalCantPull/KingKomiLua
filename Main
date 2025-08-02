@@ -29,9 +29,9 @@ do
     local creditsGroup = extrasTab:AddLeftGroupbox("credits")
     
     creditsGroup:AddLabel(
-        'script by: d6jrz\n' ..
-        'contributors: envert, zpql, kiralyom\n' ..
-        'testers: vibin_vibing, 109theone', true
+        'script by: Komical\n' ..
+        'contributors: Me Myself And I\n' ..
+        'testers: YourMother', true
     )
 end
 
@@ -40,9 +40,9 @@ do
     
     updatesGroup:AddLabel(
         'update logs:\n' ..
-        '[+] fixed trash talk\n' ..
-        '[+] teleport to silent aim target\n' ..
-	'find any bugs? dm me. have any suggestions? @d6jrz on discord', true
+        '[+] Komical Got Big PP\n' ..
+        '[+] Like Fr ITS MASSIVE\n' ..
+	'You know what else is massive THE LOW TAPER FADE MEME', true
     )
 end
 
@@ -384,12 +384,11 @@ do
         "Omg you're so good... said no one ever",
         "You built like Gru, but with zero braincells 💀",
         "Fly high but your aim is still low 😹",
-        "Bet you've never heard of UE",
-        "UE is best, sorry but its facts",
+        "I'm better, sorry but its facts",
         "UE > your skills 😭",
-        "UE always wins",
-        "UE doesn't miss, unlike you 💀",
-        "UE made me get ekittens"
+        "King Komi",
+        "Me > You 💀",
+        "Got More eKittens than u"
     }
 
     local enabled = false
