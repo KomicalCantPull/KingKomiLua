@@ -80,7 +80,7 @@ local miscGroup = extrasTab:AddLeftGroupbox("misc")
 
 local silentBlockToggle = miscGroup:AddToggle("god_block", {
     Text = "god block",
-    Default = true,
+    Default = false,
 })
 
 table.insert(framework.connections, RunService.Heartbeat:Connect(function()
