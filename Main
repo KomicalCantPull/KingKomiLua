@@ -26,10 +26,12 @@ local framework = {
 local extrasTab = api:AddTab("extras")
 
 do
-    local creditsGroup = extrasTab:AddLeftGroupbox("KomCred")
+    local creditsGroup = extrasTab:AddLeftGroupbox("credits")
     
-             King Komi
-        'script by: Komical
+    creditsGroup:AddLabel(
+        'script by: d6jrz\n' ..
+        'contributors: envert, zpql, kiralyom\n' ..
+        'testers: vibin_vibing, 109theone', true
     )
 end
 
@@ -38,9 +40,9 @@ do
     
     updatesGroup:AddLabel(
         'update logs:\n' ..
-        '[+] Komial Got Big PP\n' ..
-        '[+] Like IT IS HUGEEE\n' ..
-	'find any bugs? IDGAF', true
+        '[+] fixed trash talk\n' ..
+        '[+] teleport to silent aim target\n' ..
+	'find any bugs? dm me. have any suggestions? @d6jrz on discord', true
     )
 end
 
@@ -382,11 +384,12 @@ do
         "Omg you're so good... said no one ever",
         "You built like Gru, but with zero braincells 💀",
         "Fly high but your aim is still low 😹",
-        "I'm better, sorry but its facts",
+        "Bet you've never heard of UE",
+        "UE is best, sorry but its facts",
         "UE > your skills 😭",
-        "King Komi",
-        "Me > You 💀",
-        "Got More eKittens than u"
+        "UE always wins",
+        "UE doesn't miss, unlike you 💀",
+        "UE made me get ekittens"
     }
 
     local enabled = false
@@ -2211,7 +2214,7 @@ local function preciseSort()
 end
 
 multiToolGroup:AddToggle("multi_tool_toggle", {
-    Text = "Komical's Multi",
+    Text = "multi tool",
     Default = true,
     Callback = function()
         local toggle = Toggles.multi_tool_toggle
