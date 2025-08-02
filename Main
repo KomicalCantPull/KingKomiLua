@@ -176,7 +176,7 @@ do
 
     group:AddToggle("logs_toggle", {
         Text = "actitivty logs",
-        Default = false,
+        Default = true,
         Tooltip = "leave and join logs",
         Callback = function(enabled)
             if enabled then
@@ -188,7 +188,7 @@ do
                 })
                 group:AddSlider("notify_duration", {
                     Text = "Notify Duration",
-                    Default = 3,
+                    Default = 3.3,
                     Min = 0.5,
                     Max = 10,
                     Rounding = 1,
@@ -212,7 +212,7 @@ end
 
 miscGroup:AddToggle("anti_fling", {
     Text = "anti fling",
-    Default = false,
+    Default = true,
 })
 
 local originalCollisions = {}
@@ -345,7 +345,7 @@ do
 
     group:AddToggle("jerk_toggle", {
         Text = "jerk tool",
-        Default = false,
+        Default = true,
         Callback = function(state)
             if state then createTool() else removeTool() end
         end
@@ -391,9 +391,9 @@ do
         "Got More eKittens than u"
     }
 
-    local enabled = false
+    local enabled = true
 
-group:AddToggle("autotrash_e", { Text = "trash talk", Default = false }):OnChanged(function(v)
+group:AddToggle("autotrash_e", { Text = "trash talk", Default = true }):OnChanged(function(v)
     enabled = v
 end)
 
@@ -797,8 +797,8 @@ local miscGroup = extrasTab:AddLeftGroupbox("visual settings")
 
 framework.elements.enabled = miscGroup:AddToggle("target_hud_enabled", {
     Text = "target hud",
-    Tooltip = "fps drops for bad devices",
-    Default = false
+    Tooltip = "Victom Info",
+    Default = true
 })
 
 framework.elements.opacity = miscGroup:AddSlider("target_hud_opacity", {
@@ -2234,7 +2234,7 @@ multiToolGroup:AddToggle("multi_tool_toggle", {
 })
 
 multiToolGroup:AddLabel("Toggle Key"):AddKeyPicker("char_multi_tool_keybind", {
-    Default = "L",
+    Default = "P",
     Mode = "Toggle",
     Text = "multi tool",
     NoUI = false,
