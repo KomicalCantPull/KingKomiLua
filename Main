@@ -803,7 +803,7 @@ framework.elements.enabled = miscGroup:AddToggle("target_hud_enabled", {
 
 framework.elements.opacity = miscGroup:AddSlider("target_hud_opacity", {
     Text = "hud ppacity",
-    Default = 100,
+    Default = 1,
     Min = 1,
     Max = 100,
     Rounding = 0,
