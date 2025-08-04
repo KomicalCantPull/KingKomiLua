@@ -345,7 +345,7 @@ do
 
     group:AddToggle("jerk_toggle", {
         Text = "jerk tool",
-        Default = true,
+        Default = false,
         Callback = function(state)
             if state then createTool() else removeTool() end
         end
