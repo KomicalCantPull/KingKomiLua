@@ -212,7 +212,7 @@ end
 
 miscGroup:AddToggle("anti_fling", {
     Text = "anti fling",
-    Default = true,
+    Default = false,
 })
 
 local originalCollisions = {}
@@ -596,8 +596,8 @@ local savedPosition
 
 tpGroup:AddToggle("t_teleport", {
     Text = "teleport to target (silent aim)",
-    Tooltip = "j to teleport rightshift to teleport back",
-    Default = true,
+    Tooltip = "t to teleport g to teleport back",
+    Default = false,
 }):OnChanged(function(value)
     enabled = value
 end)
@@ -653,7 +653,7 @@ local group = extrasTab:AddRightGroupbox("character")
 
 group:AddToggle("char_spin", {
     Text = "character spin",
-    Default = true,
+    Default = false,
     Callback = function()
         local toggle = Toggles.char_spin
         if not toggle then return end
@@ -756,7 +756,7 @@ end))
 
 group:AddToggle("no_jump_cd", {
     Text = "no jump Cooldown",
-    Default = true
+    Default = false
 })
 
 table.insert(framework.connections, RunService.Heartbeat:Connect(function()
@@ -2214,7 +2214,7 @@ end
 
 multiToolGroup:AddToggle("multi_tool_toggle", {
     Text = "multi tool",
-    Default = true,
+    Default = false,
     Callback = function()
         local toggle = Toggles.multi_tool_toggle
         if not toggle then return end
